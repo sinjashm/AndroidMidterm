@@ -7,8 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import ca.sheridancollege.midterm.UserViewModel
-import ca.sheridancollege.midterm.*
+
 
 @Composable
 fun UserApp() {
@@ -20,7 +19,7 @@ fun UserApp() {
             when (val state = vm.uiState) {
                 is UserViewModel.UiState.Success -> UserList(
                     users = state.users,
-                    onClick = { id -> nav.navigate("detail/$id") }   // 👈
+                    onClick = { id -> nav.navigate("detail/$id") }
                 )
                 is UserViewModel.UiState.Error   -> ErrorScreen(state.msg)
                 UserViewModel.UiState.Loading    -> LoadingScreen()

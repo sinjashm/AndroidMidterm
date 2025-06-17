@@ -10,11 +10,9 @@ interface UserApi {
     suspend fun getUsers(): UserPayload
 
     companion object {
-        // JSON lives here
         const val BASE_URL =
             "https://tetervak.dev.fast.sheridanc.on.ca/exam-projects/user-data/data/"
 
-        // images live here
         const val IMAGE_BASE =
             "https://tetervak.dev.fast.sheridanc.on.ca/exam-projects/user-data/images/"
     }
